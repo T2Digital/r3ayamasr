@@ -62,24 +62,24 @@
   <!-- نموذج الطلب -->
   <section id="form" class="bg-white p-6 rounded-3xl shadow-xl max-w-3xl mx-auto mb-12">
     <h3 class="text-2xl font-bold text-blue-800 mb-4">بيانات الحالة</h3>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdiXchOvw5ifBcfS3NXYSm9t64_Fwp2Jgu8MT9Ofxj2c2JZ6g/formResponse" method="POST" target="_blank" class="space-y-4" onsubmit="showConfirmation(event)">
+    <form action="#" method="POST" class="space-y-4" onsubmit="showConfirmation(event)">
       <div>
         <label class="block text-blue-700">اسم المريض</label>
-        <input name="entry.1234567890" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="اكتب الاسم الكامل" required />
+        <input name="name" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="اكتب الاسم الكامل" required />
       </div>
       <div>
         <label class="block text-blue-700">المحافظة / المدينة</label>
-        <input name="entry.0987654321" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: القاهرة / المهندسين" required />
+        <input name="location" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: القاهرة / المهندسين" required />
       </div>
       <div>
         <label class="block text-blue-700">رقم الموبايل للتواصل السريع</label>
-        <input name="entry.1122334455" type="tel" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="010xxxxxxxx" required />
+        <input name="phone" type="tel" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="010xxxxxxxx" required />
       </div>
       <div>
         <label class="block text-blue-700">تفاصيل الحالة (اختياري)</label>
-        <textarea name="entry.6677889900" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
+        <textarea name="details" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
       </div>
-      <button type="submit" class="w-full bg-blue-400 hover:bg-blue-500 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
     </form>
     <div id="confirmation" class="hidden mt-6 text-green-700 font-bold text-center">
       ✅ تم إرسال الطلب بنجاح، جارى التواصل لحجز الرعاية المطلوبة.
@@ -98,9 +98,8 @@
 
   <script>
     function showConfirmation(event) {
-      setTimeout(() => {
-        document.getElementById("confirmation").classList.remove("hidden");
-      }, 1000);
+      event.preventDefault();
+      document.getElementById("confirmation").classList.remove("hidden");
     }
   </script>
 </body>
