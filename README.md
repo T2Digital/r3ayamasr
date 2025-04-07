@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -26,7 +27,7 @@
 <body class="bg-gradient-to-b from-blue-100 via-blue-200 to-cyan-100 min-h-screen flex flex-col">
   <!-- الهيدر -->
   <header class="bg-white shadow p-4 text-center flex flex-col items-center">
-    <img src="https://imgur.com/gallery/r3aya-masr-4zVmU4j" alt="شعار رعاية مصر" class="w-28 h-28 mb-2">
+    <img src="r3aya-masr.png" alt="شعار رعاية مصر" class="w-28 h-28 mb-2">
     <h1 class="text-3xl font-bold text-blue-900">رعاية مصر</h1>
     <p class="text-blue-600 mt-2">خدمة لحجز الرعاية المركزة فورًا لأهالي المرضى</p>
   </header>
