@@ -27,7 +27,7 @@
 <body class="bg-gradient-to-b from-blue-100 via-blue-200 to-cyan-100 min-h-screen flex flex-col">
   <!-- الهيدر -->
   <header class="bg-white shadow p-4 text-center flex flex-col items-center">
-    <img src="https://i.imgur.com/JNBnGdS.png" alt="شعار رعاية مصر" class="w-24 h-24 mb-2">
+    <img src="https://imgur.com/gallery/r3aya-masr-4zVmU4j" alt="شعار رعاية مصر" class="w-28 h-28 mb-2">
     <h1 class="text-3xl font-bold text-blue-900">رعاية مصر</h1>
     <p class="text-blue-600 mt-2">خدمة لحجز الرعاية المركزة فورًا لأهالي المرضى</p>
   </header>
@@ -63,7 +63,7 @@
   <!-- نموذج الطلب -->
   <section id="form" class="bg-white p-6 rounded-3xl shadow-xl max-w-3xl mx-auto mb-12">
     <h3 class="text-2xl font-bold text-blue-800 mb-4">بيانات الحالة</h3>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdiXchOvw5ifBcfS3NXYSm9t64_Fwp2Jgu8MT9Ofxj2c2JZ6g/formResponse" method="POST" target="_blank" class="space-y-4">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdiXchOvw5ifBcfS3NXYSm9t64_Fwp2Jgu8MT9Ofxj2c2JZ6g/formResponse" method="POST" target="_blank" class="space-y-4" onsubmit="showConfirmation(event)">
       <div>
         <label class="block text-blue-700">اسم المريض</label>
         <input name="entry.1234567890" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="اكتب الاسم الكامل" required />
@@ -80,8 +80,11 @@
         <label class="block text-blue-700">تفاصيل الحالة (اختياري)</label>
         <textarea name="entry.6677889900" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
       </div>
-      <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 rounded-xl text-lg font-bold">إرسال الطلب</button>
+      <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-700 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
     </form>
+    <div id="confirmation" class="hidden mt-6 text-green-700 font-bold text-center">
+      ✅ تم إرسال الطلب بنجاح، جارى التواصل لحجز الرعاية المطلوبة.
+    </div>
     <p class="text-center text-blue-700 mt-4">أو تواصل على واتساب مباشرة عبر الزر التالي 👇</p>
     <div class="text-center mt-2">
       <a href="https://wa.me/201111199807" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full text-lg">التواصل على واتساب</a>
@@ -90,8 +93,16 @@
 
   <!-- الفوتر -->
   <footer class="bg-blue-900 text-white text-center py-4 mt-auto">
-    <p>© 2025 رعاية مصر | خدمة إنسانية لإنقاذ الأرواح</p>
+    <p>© 2025 رعاية مصر | كل دقيقة بتفرق فى حياة مريض </p>
     <p class="mt-1 text-sm">للتواصل السريع: <a href="tel:01111199807" class="underline">01111199807</a> | <a href="https://wa.me/201111199807" target="_blank" class="underline">واتساب مباشر</a></p>
   </footer>
+
+  <script>
+    function showConfirmation(event) {
+      setTimeout(() => {
+        document.getElementById("confirmation").classList.remove("hidden");
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
