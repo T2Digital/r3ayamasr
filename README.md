@@ -39,7 +39,7 @@
       <a href="#form" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300">اطلب سرير رعاية دلوقتي</a>
     </div>
     <div class="md:w-1/2 mt-8 md:mt-0 text-center">
-      <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" alt="رعاية مركزة" class="mx-auto w-64 h-64">
+      <img src="https://i.postimg.cc/wvKf0bds/18.png" alt="رعاية مركزة" class="mx-auto w-64 h-64">
     </div>
   </section>
 
@@ -79,7 +79,7 @@
         <label class="block text-blue-700">تفاصيل الحالة (اختياري)</label>
         <textarea name="entry.6677889900" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
       </div>
-      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
+      <button type="submit" class="w-full bg-blue-300 hover:bg-blue-400 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
     </form>
     <div id="confirmation" class="hidden mt-6 text-green-700 font-bold text-center">
       ✅ تم إرسال الطلب بنجاح، جارى التواصل لحجز الرعاية المطلوبة.
