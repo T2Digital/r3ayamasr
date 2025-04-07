@@ -27,7 +27,7 @@
 <body class="bg-gradient-to-b from-blue-100 via-blue-200 to-cyan-100 min-h-screen flex flex-col">
   <!-- الهيدر -->
   <header class="bg-white shadow p-4 text-center flex flex-col items-center">
-    <img src="r3aya-masr.png" alt="شعار رعاية مصر" class="w-28 h-28 mb-2">
+    <img src="https://i.postimg.cc/2ybw4Q1S/r3aya-masr.png" alt="شعار رعاية مصر" class="w-28 h-28 mb-2">
     <h1 class="text-3xl font-bold text-blue-900">رعاية مصر</h1>
     <p class="text-blue-600 mt-2">خدمة لحجز الرعاية المركزة فورًا لأهالي المرضى</p>
   </header>
@@ -80,7 +80,7 @@
         <label class="block text-blue-700">تفاصيل الحالة (اختياري)</label>
         <textarea name="entry.6677889900" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
       </div>
-      <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-700 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
     </form>
     <div id="confirmation" class="hidden mt-6 text-green-700 font-bold text-center">
       ✅ تم إرسال الطلب بنجاح، جارى التواصل لحجز الرعاية المطلوبة.
