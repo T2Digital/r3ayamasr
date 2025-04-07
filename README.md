@@ -1,3 +1,4 @@
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -62,31 +63,31 @@
   <!-- نموذج الطلب -->
   <section id="form" class="bg-white p-6 rounded-3xl shadow-xl max-w-3xl mx-auto mb-12">
     <h3 class="text-2xl font-bold text-blue-800 mb-4">بيانات الحالة</h3>
-    <form action="#" method="POST" class="space-y-4" onsubmit="showConfirmation(event)">
+    <form class="space-y-4">
       <div>
         <label class="block text-blue-700">اسم المريض</label>
-        <input name="name" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="اكتب الاسم الكامل" required />
+        <input name="entry.1234567890" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="اكتب الاسم الكامل" required />
       </div>
       <div>
         <label class="block text-blue-700">المحافظة / المدينة</label>
-        <input name="location" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: القاهرة / المهندسين" required />
+        <input name="entry.0987654321" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: القاهرة / المهندسين" required />
       </div>
       <div>
         <label class="block text-blue-700">رقم الموبايل للتواصل السريع</label>
-        <input name="phone" type="tel" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="010xxxxxxxx" required />
+        <input name="entry.1122334455" type="tel" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="010xxxxxxxx" required />
       </div>
       <div>
         <label class="block text-blue-700">تفاصيل الحالة (اختياري)</label>
-        <textarea name="details" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
+        <textarea name="entry.6677889900" rows="3" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: مريض في غيبوبة / حالة قلب حرجة..."></textarea>
       </div>
-      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
+      <button type="button" onclick="sendToWhatsApp()" class="w-full bg-blue-400 hover:bg-blue-500 text-black py-3 rounded-xl text-lg font-bold">حجز رعاية</button>
     </form>
     <div id="confirmation" class="hidden mt-6 text-green-700 font-bold text-center">
       ✅ تم إرسال الطلب بنجاح، جارى التواصل لحجز الرعاية المطلوبة.
     </div>
     <p class="text-center text-blue-700 mt-4">أو تواصل على واتساب مباشرة عبر الزر التالي 👇</p>
     <div class="text-center mt-2">
-      <a href="https://wa.me/201111199807" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full text-lg">التواصل على واتساب</a>
+      <button onclick="sendToWhatsApp()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full text-lg">التواصل على واتساب</button>
     </div>
   </section>
 
@@ -97,9 +98,17 @@
   </footer>
 
   <script>
-    function showConfirmation(event) {
-      event.preventDefault();
-      document.getElementById("confirmation").classList.remove("hidden");
+    function sendToWhatsApp() {
+      const name = document.querySelector('input[name="entry.1234567890"]').value;
+      const city = document.querySelector('input[name="entry.0987654321"]').value;
+      const phone = document.querySelector('input[name="entry.1122334455"]').value;
+      const details = document.querySelector('textarea[name="entry.6677889900"]').value || "لا يوجد تفاصيل إضافية";
+
+      const message = `*طلب حجز رعاية مركزة من الموقع:*\n\n👤 *اسم المريض:* ${name}\n📍 *المنطقة:* ${city}\n📞 *رقم التواصل:* ${phone}\n📝 *تفاصيل الحالة:* ${details}`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappNumber = "201111199807";
+      const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      window.open(url, "_blank");
     }
   </script>
 </body>
