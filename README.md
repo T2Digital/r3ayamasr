@@ -1,10 +1,21 @@
-
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>رعاية مصر - احجز رعاية مركزة لحالتك فورًا</title>
+
+  <title>رعاية مصر | حجز رعاية مركزة فورية - إسعاف فوري وخدمة طوارئ </title>
+
+  <meta name="description" content="احجز سرير رعاية مركزة الآن في المعادي، حلوان، أو البساتين. خدمات إسعاف فوري، نقل طوارئ، تواصل مباشر مع المستشفيات، وسرعة استجابة لإنقاذ حياة المريض.">
+
+  <meta name="keywords" content="رعاية مركزة, المعادي, حلوان, البساتين, إسعاف فوري, حجز رعاية طبية, أسرّة عناية مركزة, نقل مريض طوارئ, رعاية مصر, حجز سرير مستشفى, طوارئ طبية, خدمة إسعاف, إنقاذ مريض, عناية مركزة خاصة, ICU القاهرة">
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="رعاية مصر" />
+
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/VvkjRj5C/r3aya-masr-removebg-preview-1.png">
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
   <script type="text/javascript">
     (function () {
       var options = {
@@ -18,6 +29,7 @@
       var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
   </script>
+
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -25,14 +37,12 @@
   </style>
 </head>
 <body class="bg-gradient-to-b from-blue-100 via-blue-200 to-cyan-100 min-h-screen flex flex-col">
-  <!-- الهيدر -->
   <header class="bg-white shadow p-4 text-center flex flex-col items-center">
     <img src="https://i.postimg.cc/VvkjRj5C/r3aya-masr-removebg-preview-1.png" alt="شعار رعاية مصر" class="w-28 h-28 mb-2">
     <h1 class="text-3xl font-bold text-blue-900">رعاية مصر</h1>
     <p class="text-blue-600 mt-2">خدمة لحجز الرعاية المركزة فورًا لأهالي المرضى</p>
   </header>
 
-  <!-- البانر الرئيسي -->
   <section class="flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-6xl mx-auto">
     <div class="md:w-1/2 text-center md:text-right">
       <h2 class="text-4xl font-bold text-blue-800 leading-snug">أمان وسرعة في إنقاذ حياة غالية</h2>
@@ -44,7 +54,6 @@
     </div>
   </section>
 
-  <!-- مميزات الخدمة -->
   <section class="bg-white py-12 px-6 max-w-5xl mx-auto text-center rounded-3xl shadow-lg mb-8">
     <h3 class="text-3xl font-bold text-blue-800 mb-6">مميزات رعاية مصر</h3>
     <ul class="space-y-4 text-blue-700 text-lg">
@@ -60,7 +69,6 @@
     </p>
   </section>
 
-  <!-- نموذج الطلب -->
   <section id="form" class="bg-white p-6 rounded-3xl shadow-xl max-w-3xl mx-auto mb-12">
     <h3 class="text-2xl font-bold text-blue-800 mb-4">بيانات الحالة</h3>
     <form class="space-y-4">
@@ -70,7 +78,7 @@
       </div>
       <div>
         <label class="block text-blue-700">المحافظة / المدينة</label>
-        <input name="entry.0987654321" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: القاهرة / المهندسين" required />
+        <input name="entry.0987654321" type="text" class="w-full p-3 border border-blue-200 rounded-xl" placeholder="مثلاً: القاهرة / المعادي" required />
       </div>
       <div>
         <label class="block text-blue-700">رقم الموبايل للتواصل السريع</label>
@@ -91,7 +99,6 @@
     </div>
   </section>
 
-  <!-- الفوتر -->
   <footer class="bg-blue-900 text-white text-center py-4 mt-auto">
     <p>© 2025 رعاية مصر | كل دقيقة بتفرق فى حياة مريض </p>
     <p class="mt-1 text-sm">للتواصل السريع: <a href="tel:01111199807" class="underline">01111199807</a> | <a href="https://wa.me/201111199807" target="_blank" class="underline">واتساب مباشر</a></p>
